@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo App</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="cssStyleSheet.css">
+</head>
+<body>
+    <div id="mainBox">
+        <div id="heading">
+            <p class="heading" style="font-weight: 600;">To Do<span style="font-size: 30px;font-weight:400;position: relative;top:20px;">List</span><span style="position:relative;top:30px;left:2px;">!</span></p>
+        </div>
+        <div id="forDisplay">
+            <div id="meetingsToDo">
+                <p class="hoverBorder" style="width:67px;font-weight: bold;margin-left:28px;position: relative;top:10px;">Meetings</p>
+                <div id="meetingNo">
+                    {
+                    <span class="inputBoxTitle">Remain</span>
+                    <input id="meetingRemainNo" class="inputBox" type="text" placeholder=" 0" readonly/>
+                    <span style="margin:0 7px 0 0;"></span>
+                    <span class="inputBoxTitle">Done</span>
+                    <input id="meetingDoneNo" class="inputBox" type="text" placeholder=" 0" readonly/>
+                    <span style="margin-left: 4px">}</span>
+                </div>
+                <ul id="meetingListItemContainer">
+                    <!--  -->
+                </ul>
+                <div id="addDoneButtons">
+                    <button class="cicleButtons" id="addBtn" onclick="meetingAddButton()" style="background-color: #F24953;">+</button>
+                    <button class="cicleButtons" id="doneBtn" onclick="meetingDoneButton()" style="background-color: #0F64F3"><span style="content: '\2713';">&#10003;</span></button>
+                </div>
+            </div>
+        </div>
+        <ul id="listItemsContainer">
+            <li id="itemInputBar" id="listItem">
+                <span style="font-size: 20px;content: '\261E';">&#9758;</span>
+                <input id="inputTextBox" class="textBox" type="text" placeholder="Add Task....."/>
+                <button id="addingTaskButton" onclick="addItem()"><span style="content: '\2713';">&#10003;</span></button>
+            </li>
+        </ul>
+        <div id="optionBar">
+            <div id="meetingButton">
+                <button class="lowerButtons" onclick="meetingMenu()">Meetings</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
